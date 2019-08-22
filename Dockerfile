@@ -6,8 +6,8 @@ VOLUME /tmp
 
 EXPOSE 8080
 
-ARG JAR_FILE=target/CodeStateConverter
+ARG JAR_FILE=target/codestateconverter
 
-ADD ${JAR_FILE} CodeStateConverter.jar
+ADD ${JAR_FILE} codestateconverter.jar
 
-ENTRYPOINT ["java", "-Djava.security.edg=file:/dev/./urandom", "-jar", "/CodeStateConverter.jar"]
+ENTRYPOINT ["java", "-Djava.security.edg=file:/dev/./urandom", "-jar", "/codestateconverter.jar"]
